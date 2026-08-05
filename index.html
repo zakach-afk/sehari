@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sehrai Brothers and Company (SMC-Private) Limited | Official Corporate Website</title>
+    <style>
+        /* Modern Reset & Theme Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+
+        :root {
+            --primary: #1e293b;    /* Deep Slate Navy */
+            --accent: #d97706;     /* Rich Amber Accent */
+            --highlight: #b45309;  /* Dark Gold Accent */
+            --bg-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: var(--primary);
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .brand {
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--accent);
+            font-size: 0.8rem;
+            display: block;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 6.5rem 8% 5.5rem 8%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.7rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            max-width: 780px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #ffffff;
+            padding: 0.8rem 2.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-btn:hover {
+            background-color: #b45309;
+        }
+
+        /* Container & Sections */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header div {
+            width: 50px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Cards Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+            border-top: 3px solid var(--accent);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Compliance Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-left: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .info-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .info-row {
+            display: flex;
+            margin-bottom: 0.9rem;
+            font-size: 0.95rem;
+        }
+
+        .info-row strong {
+            width: 140px;
+            flex-shrink: 0;
+            color: var(--primary);
+        }
+
+        .info-row span {
+            color: var(--text-muted);
+        }
+
+        .duns-box {
+            background-color: #fef3c7;
+            border-radius: 6px;
+            padding: 0.8rem 1rem;
+            margin-top: 1.2rem;
+            border: 1px dashed var(--accent);
+        }
+
+        .duns-box strong {
+            color: var(--primary);
+        }
+
+        .duns-box span {
+            font-weight: 700;
+            color: var(--highlight);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            border-top: 4px solid var(--accent);
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero {
+                padding: 4rem 1rem;
+            }
+            .info-row {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            .info-row strong {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <nav>
+        <div class="brand">
+            SEHRAI BROTHERS AND COMPANY
+            <span>( SMC-PRIVATE ) LIMITED</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#compliance">Verification</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>SEHRAI BROTHERS AND COMPANY ( SMC-PRIVATE ) LIMITED</h1>
+        <p>A trusted commercial enterprise delivering high-standard business solutions, trading services, and corporate operational excellence.</p>
+        <a href="#compliance" class="hero-btn">View Official Registry Profile</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <div class="section-header">
+            <h2>About Our Company</h2>
+            <div></div>
+        </div>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem;">
+            SEHRAI BROTHERS AND COMPANY ( SMC-PRIVATE ) LIMITED is an officially registered corporate entity in Pakistan. Committed to commercial integrity, transparent trade execution, and regulatory compliance, we focus on driving efficient corporate solutions and sustainable business growth.
+        </p>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section id="services" style="background-color: #f1f5f9; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Competencies</h2>
+                <div></div>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Commercial Trading</h3>
+                    <p>Executing efficient commercial trade networks, resource distribution, and strategic supply management.</p>
+                </div>
+                <div class="card">
+                    <h3>Operational Management</h3>
+                    <p>Structuring day-to-day business processes with a focus on workflow efficiency, quality assurance, and compliance.</p>
+                </div>
+                <div class="card">
+                    <h3>Enterprise Solutions</h3>
+                    <p>Providing high-value corporate services and long-term commercial partnership strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance / Registry Section -->
+    <section id="compliance" class="container">
+        <div class="section-header">
+            <h2>Official Registry & Tax Profile</h2>
+            <div></div>
+        </div>
+        <div class="grid-2">
+            <!-- Box 1 -->
+            <div class="info-card">
+                <h3>Entity Identification</h3>
+                <div class="info-row">
+                    <strong>Legal Name:</strong>
+                    <span>SEHRAI BROTHERS AND COMPANY ( SMC-PRIVATE ) LIMITED</span>
+                </div>
+                <div class="info-row">
+                    <strong>Registration No:</strong>
+                    <span>0300849</span>
+                </div>
+                <div class="info-row">
+                    <strong>Inc. Number:</strong>
+                    <span>850410677</span>
+                </div>
+                <div class="info-row">
+                    <strong>Category:</strong>
+                    <span>Company (SMC-Private)</span>
+                </div>
+                <div class="info-row">
+                    <strong>Activity Type:</strong>
+                    <span>Business Services</span>
+                </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="info-card">
+                <h3>Filing & Location</h3>
+                <div class="info-row">
+                    <strong>Reg. Date:</strong>
+                    <span>14-July-2025</span>
+                </div>
+                <div class="info-row">
+                    <strong>Inc. Date:</strong>
+                    <span>14-July-2025</span>
+                </div>
+                <div class="info-row">
+                    <strong>Tax Office:</strong>
+                    <span>CRO Multan</span>
+                </div>
+                <div class="info-row">
+                    <strong>Registered Address:</strong>
+                    <span>Chongi 21 Old Shuja Abad Road Multan, 60000 Pakistan</span>
+                </div>
+                
+                <div class="duns-box">
+                    <strong>D-U-N-S No:</strong> <span>850410677</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SEHRAI BROTHERS AND COMPANY ( SMC-PRIVATE ) LIMITED. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
